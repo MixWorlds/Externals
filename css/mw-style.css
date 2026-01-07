@@ -180,6 +180,25 @@ a[dusk="topnav-invoices"] {
   display: none !important;
 }
 
+.navbar-nav.navbar-right li > a[href*="/user/me/token"],
+.navbar-nav.navbar-right li > a[href*="/page/136000-inicio"] {
+    display: none !important;
+}
+
+.navbar-nav.navbar-right li > a[href*="/user/me/deliveries"] {
+    display: none !important;
+}
+
+.navbar-nav.navbar-right li > a[href*="/user/me/subscription"] {
+    display: none !important;
+}
+
+.navbar-nav.navbar-right li > a[href*="/user/me/invoices"] {
+    display: none !important;
+}
+
+/* =============================== */
+/* SPECIAL TOOLS */
 td.contentwrap .frame-title:has(> h1.title:contains("Special tools")),
 td.contentwrap form[action*="/user/me/kick"],
 td.contentwrap p:contains("If you're unable to join the server") {
