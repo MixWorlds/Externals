@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
+
+body, p, a, span, div {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+nav#main-nav ul li.dropdown > a::after {
+  display: none !important;
+}
+
+nav#main-nav ul li.dropdown:hover > ul,
+nav#main-nav ul li.dropdown > ul:hover {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+nav#main-nav ul li.dropdown > ul {
+  background: white !important;
+  border: 2px solid #FFD700 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+  padding: 10px 0 !important;
+}
+
+nav#main-nav ul li.dropdown > ul li a {
+  color: #FFD700 !important;
+  padding: 12px 25px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+nav#main-nav ul li.dropdown > ul li a:hover {
+  background: rgba(255,215,0,0.1) !important;
+  padding-left: 30px !important;
+}
+
+footer {
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%) !important;
+  padding: 60px 20px 30px !important;
+  border-top: 3px solid #FFD700 !important;
+}
+
+footer > div:first-child {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 40px !important;
+  max-width: 1200px !important;
+  margin: 0 auto 40px !important;
+}
+
+footer h3, footer h2 {
+  color: #FF4444 !important;
+  font-size: 1.4em !important;
+  margin-bottom: 20px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  border-bottom: 2px solid #FFD700 !important;
+  padding-bottom: 10px !important;
+}
+
+footer a {
+  color: #FFD700 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  padding: 8px 0 !important;
+  transition: all 0.3s ease !important;
+  font-size: 1.1em !important;
+}
+
+footer a:hover {
+  color: #FFF !important;
+  transform: translateX(10px) !important;
+  text-shadow: 0 0 10px #FFD700 !important;
+}
+
+footer p {
+  color: #ccc !important;
+  line-height: 1.8 !important;
+  margin-bottom: 15px !important;
+  font-size: 1.05em !important;
+}
+
+footer > div > div {
+  margin-bottom: 30px !important;
+}
+
+footer a[href*="discord"]::before { content: "???? "; }
+footer a[href*="twitch"]::before { content: "???? "; }
+footer a[href*="github"]::before { content: "???? "; }
+footer a[href*="calendar"]::before { content: "???? "; }
+footer a[href*="servidores"]::before { content: "????️ "; }
+footer a[href*="mixworlds.net"]::before { content: "???? "; }
+footer a[href*="aurinmix"]::before { content: "???? "; }
+
+footer > div:last-child {
+  text-align: center !important;
+  padding-top: 30px !important;
+  border-top: 1px solid #333 !important;
+  color: #888 !important;
+  font-size: 0.95em !important;
+  margin-top: 20px !important;
+}
+
+button, .button, a.button {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+  color: #000 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 30px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(255,215,0,0.4) !important;
+}
+
+button:hover, .button:hover, a.button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255,215,0,0.6) !important;
+}
+
+@media (max-width: 768px) {
+  footer > div:first-child {
+    grid-template-columns: 1fr !important;
+  }
+  
+  nav#main-nav ul li.dropdown > ul {
+    position: relative !important;
+    width: 100% !important;
+  }
+}
+
+h2[style*="color: rgb(255, 68, 68)"],
+h2[style*="color: #ff4444"],
+h2[style*="color:#ff4444"],
+h2[style*="color: #FF4444"] {
+  animation: glowRed 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes glowRed {
+  0% { text-shadow: 0 0 5px rgba(255, 68, 68, 0.3); transform: scale(1); }
+  50% { text-shadow: 0 0 20px rgba(255, 68, 68, 0.8), 0 0 30px rgba(255, 68, 68, 0.4); transform: scale(1.03); }
+  100% { text-shadow: 0 0 5px rgba(255, 68, 68, 0.3); transform: scale(1); }
+}
+
+body.api-login-page a[dusk="login-steam"],
+body.api-login-page a[dusk="login-epic"],
+body.api-login-page a[dusk="login-minecraft"],
+body.api-login-page a[dusk="login-twitch"],
+body.api-login-page a[dusk="login-patreon"],
+body.api-login-page a[dusk="login-microsoft"] {
+  display: none !important;
+}
+
+a[dusk="topnav-shop"],
+a[dusk="topnav-supporter-tiers"],
+a[dusk="topnav-tokens"],
+a[dusk="topnav-deliveries"],
+a[dusk="topnav-subscriptions"],
+a[dusk="topnav-invoices"] {
+  display: none !important;
+}
+
+.navbar-nav.navbar-right > li.dropdown:has(> ul.dropdown-menu > li > a[href*="/user/me/token"]) { display: none !important; }
+
+.navbar-nav.navbar-right > li.dropdown > ul.dropdown-menu > li > a[href*="/user/me/token"],
+.navbar-nav.navbar-right > li.dropdown > ul.dropdown-menu > li > a[href*="/page/136000-inicio"],
+.navbar-nav.navbar-right > li.dropdown > ul.dropdown-menu > li > a[href*="/user/me/deliveries"],
+.navbar-nav.navbar-right > li.dropdown > ul.dropdown-menu > li > a[href*="/user/me/subscription"],
+.navbar-nav.navbar-right > li.dropdown > ul.dropdown-menu > li > a[href*="/user/me/invoices"] {
+  display: none !important;
+}
+
+.navbar-nav.navbar-right > li.dropdown > a.dropdown-toggle:contains("Tokens"),
+.navbar-nav.navbar-right > li.dropdown > a.dropdown-toggle:contains("Deliveries"),
+.navbar-nav.navbar-right > li.dropdown > a.dropdown-toggle:contains("Subscriptions"),
+.navbar-nav.navbar-right > li.dropdown > a.dropdown-toggle:contains("Invoices") {
+  display: none !important;
+}
+
+td.contentwrap .frame-title:has(> h1.title:contains("Special tools")),
+td.contentwrap form[action*="/user/me/kick"],
+td.contentwrap p:contains("If you're unable to join the server") {
+  display: none !important;
+}
