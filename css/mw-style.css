@@ -197,10 +197,26 @@ a[dusk="topnav-invoices"] {
     display: none !important;
 }
 
-/* =============================== */
-/* SPECIAL TOOLS */
-td.contentwrap .frame-title:has(> h1.title:contains("Special tools")),
-td.contentwrap form[action*="/user/me/kick"],
-td.contentwrap p:contains("If you're unable to join the server") {
+div.alert.alert-info {
+    display: none !important;
+}
+
+a[dusk="connect-minecraft"],
+a[dusk="connect-epic"],
+a[dusk="connect-steam"],
+a[dusk="connect-patreon"],
+a[dusk="connect-microsoft"] {
+    display: none !important;
+}
+
+form[action="https://calendariomixworlds.premiumark.net/user/me/me/sub_users/connect"] {
   display: none !important;
+}
+
+td.contentwrap > p:first-of-type {
+    display: none !important;
+}
+
+td.contentwrap button.btn-theme.center.btn-theme-gem {
+    display: none !important;
 }
